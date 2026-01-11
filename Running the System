@@ -1,0 +1,12 @@
+inputs = {
+    "requirement": "Write a function palindrome(s) that returns True if s is a palindrome.",
+    "code": "",
+    "tests": "",
+    "iterations": 0,
+    "success": False,
+    "error": None,
+    "output": None
+}
+
+result = app.invoke(inputs)
+print("\n FINAL CODE:\n", result["code"])
