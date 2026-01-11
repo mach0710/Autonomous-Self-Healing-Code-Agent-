@@ -1,2 +1,15 @@
-# Autonomous-Self-Healing-Code-Agent-
-An agentic AI system built with Python, LangGraph, and Llama-3 that automates the full software development lifecycle. It autonomously generates code, authors unit tests, executes the logic in a secure Docker sandbox, and self-heals by analyzing error tracebacks to iteratively fix bugs until all tests pass.
+Project Architecture
+
+Generator Node: Creates the initial solution based on user requirements.
+
+QA Node: Authors a test suite to verify logic and edge cases.
+
+Executor Node: Runs the code in a Docker container and captures results.
+
+Healer Node: Triggered on failure; reflects on the error log to refactor the code.
+
+
+
+Dependencies
+
+To run this project, you will need Python 3.9+ and Docker Desktop installed.
