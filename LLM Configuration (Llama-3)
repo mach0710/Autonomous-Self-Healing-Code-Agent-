@@ -1,5 +1,0 @@
-!pip install langchain_community
-from langchain_community.chat_models import ChatOllama
-
-# Ensure you have run `ollama pull llama3`
-llm = ChatOllama(model="llama3", temperature=0)
