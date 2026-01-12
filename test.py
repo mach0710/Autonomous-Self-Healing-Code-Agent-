@@ -1,0 +1,11 @@
+def write_tests_node(state: AgentState):
+    print("--- GENERATING TESTS ---")
+    
+    prompt = ChatPromptTemplate.from_messages([
+        ("system", "You are a QA Engineer. Write 3 simple assert statements to verify the following code."),
+        ("user", "Requirement: {requirement}\nCode: {code}\n\nReturn ONLY python assert statements.")
+    ])
+    chain = prompt | llm
+    result = chain.invoke({"requirement": state['requirement'], "code": state['code']})
+    
+    return {"tests": result.content.replace("```python", "").replace("```", "").strip()}
